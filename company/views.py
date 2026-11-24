@@ -37,12 +37,6 @@ def customernew(request):
 	
 	return render(request, "customer_new.html",)
 
-def customerupdate_old(request, pk):
-	data = Customer.objects.get(pk =pk)
-	data.first_name = "ooo"
-	data.save()
-	message = "<h1> Update Customer</h1><p>Customer updated successfully. Go back to <a href='/customers'>Customers</a> <p/>"
-	return HttpResponse(message)
 
 def customerupdate(request, pk):
 	data = Customer.objects.get(pk =pk)
